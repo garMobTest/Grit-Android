@@ -1,0 +1,49 @@
+apply plugin: 'base'
+apply plugin: 'com.android.application'
+
+android {
+    packagingOptions {
+
+        pickFirst 'META-INF/LICENSE'
+
+    }
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.ibm.tone_analyzer"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    lintOptions {
+        warning 'InvalidPackage'
+    }
+}
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+
+dependencies {
+
+    compile ('com.ibm.mobilefirstplatform.clientsdk.android:push:3.+')
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.google.android:flexbox:0.2.3'
+    compile 'com.ibm.watson.developer_cloud:java-sdk:3.3.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
+}

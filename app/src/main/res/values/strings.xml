@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">grittone</string>
+    <string name="default_text">Text to send to Watson Tone Analyzer</string>
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_close">Close Application</string>
+    <string name="error_title_default">Error in grittone</string>
+    <string name="error_title_invalid_credentials">Invalid Tone Analyzer Credentials</string>
+    <string name="error_message_invalid_credentials">Please verify your credentials in \"values/watson_credentials\" and rebuild the application.\n\nSee the README for further assistance.</string>
+    <string name="error_title_bluemix_connection">Failed to Connect to Bluemix</string>
+    <string name="error_message_bluemix_connection">Please verify your connection to the internet.\n\nSee the README for further assistance.</string>
+</resources>
